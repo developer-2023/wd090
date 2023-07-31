@@ -5,18 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+        }
         .container {
             display: flex;
-            flex-direction: column;
             border: 1px dashed red;
+            margin-bottom: 20px;
         }
-        div {
-            border: 1px solid grey;
+        .container div {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            background-color: lightgreen;
+            line-height: 50px; /* to align text vertically */
+            text-align: center;
+        }
+        .direction-column {
+            flex-direction: column;
+        }
+        .direction-column-reverse {
+            flex-direction: column-reverse;
+        }
+        .direction-row {
+            flex-direction: row;
+        }
+        .direction-row-reverse {
+            flex-direction: row-reverse;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    {flex-direction: column;}
+    <div class="container direction-column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    {flex-direction: column-reverse;}
+    <div class="container direction-column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    {flex-direction: row;}
+    <div class="container direction-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    {flex-direction: row-reverse;}
+    <div class="container direction-row-reverse">
         <div>1</div>
         <div>2</div>
         <div>3</div>
